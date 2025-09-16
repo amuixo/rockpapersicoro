@@ -1,6 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerChoose
+public class PlayerChoose : MonoBehaviour
 {
 // 0 is rock, 1 is paper, 2 is scissors
 
@@ -51,5 +55,8 @@ public class PlayerChoose
     scissorsButton.gameObject.SetActive(false);
 
     }
+
+
+
 
 }
