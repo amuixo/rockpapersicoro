@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerChoose
 {
+// 0 is rock, 1 is paper, 2 is scissors
+
     //list of sprites that we want to choose (rock paper scissors)
     public Sprite[] spritesToChooseFrom;
 
@@ -17,6 +19,21 @@ public class PlayerChoose
     public void RockButton()
     {
 
+    playerChoose = 0;
+
+    }
+
+    public void PaperButton()
+    {
+
+    playerChoose = 1;
+
+    }
+
+    public void ScissorsButton()
+    {
+
+    playerChoose = 2;
 
     }
 
