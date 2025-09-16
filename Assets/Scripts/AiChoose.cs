@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AiChoose : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class AiChoose : MonoBehaviour
             playerChoose.scissorsButton.gameObject.SetActive(true);
             winText.text = "";
             playerChoose.playerChooseText.text = "";
+            aiImage.sprite= null;
             resetButton.gameObject.SetActive(false);
 
         }

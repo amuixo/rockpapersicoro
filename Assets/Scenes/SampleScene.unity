@@ -239,10 +239,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 0dba6a8d6628747e1a09c30f60012c7b, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 971197870}
+        m_TargetAssemblyTypeName: PlayerChoose, Assembly-CSharp
+        m_MethodName: RockButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 242121349}
   - component: {fileID: 242121348}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +333,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242121349}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1314438775}
+        m_TargetAssemblyTypeName: AiChoose, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &242121349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,6 +1186,7 @@ GameObject:
   - component: {fileID: 1314438772}
   - component: {fileID: 1314438774}
   - component: {fileID: 1314438773}
+  - component: {fileID: 1314438775}
   m_Layer: 5
   m_Name: AI Choice
   m_TagString: Untagged
@@ -1197,7 +1210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 221}
+  m_AnchoredPosition: {x: 0, y: 222}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314438773
@@ -1207,7 +1220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314438771}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1220,7 +1233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -9058191309020226661, guid: 8700d360ddb624a778e62a72ebbe1d6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1238,6 +1251,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314438771}
   m_CullTransparentMesh: 1
+--- !u!114 &1314438775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314438771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4776221afe19a41f9985ec33922947e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AiChoose
+  sprites:
+  - {fileID: -531929956169442529, guid: 6485ba06e62ef451e9d0123b07584da2, type: 3}
+  - {fileID: 5614900425197428888, guid: ba6aadccee57c4a5787d6ed1e7ad685d, type: 3}
+  - {fileID: -6915889669426608842, guid: 23a9152b490be4d77837cd548e573cc6, type: 3}
+  aiChoose: -1
+  aiImage: {fileID: 1314438773}
+  playerChoose: {fileID: 971197870}
+  winText: {fileID: 360935005}
+  resetButton: {fileID: 909040417}
 --- !u!1 &1353257811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,13 +1666,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 971197870}
+        m_TargetAssemblyTypeName: PlayerChoose, Assembly-CSharp
+        m_MethodName: PaperButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
