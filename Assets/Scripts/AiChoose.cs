@@ -13,6 +13,9 @@ public class AiChoose : MonoBehaviour
     public PlayerChoose playerChoose;
 
     public TextMeshProUGUI winText;
+
+    public Button resetButton;
+
     public void PlayButton()
     {
         aiImage.gameObject.SetActive(true);
@@ -23,7 +26,7 @@ public class AiChoose : MonoBehaviour
 
         if(aiChoose == playerChoose.playerChoose) 
         {
-            winText.text = "You tied!";
+            winText.text = "You tied! :( )";
             
         }
 
@@ -36,5 +39,21 @@ public class AiChoose : MonoBehaviour
         {
             winText.text = "You win >:)";
         }
+         resetButton.gameObject.SetActive(true);
     }
+    
+    //resets everything so you can play again
+        public void ResetButton(){
+
+            aiChoose = -1;
+            playerChoose.playerChoose = -1;
+            playerChoose.rockButton.gameObject.SetActive(true);
+            playerChoose.paperButton.gameObject.SetActive(true);
+            playerChoose.scissorsButton.gameObject.SetActive(true);
+            winText.text = "";
+            playerChoose.playerChooseText.text = "";
+            resetButton.gameObject.SetActive(false);
+
+        }
+    
 }
